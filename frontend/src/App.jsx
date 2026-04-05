@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import axios from "./api/axiosconfig"
 import {asyncGetuser} from "./store/userActions";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
-   const  dispatch = useDispatch()
+   const  data = useSelector((state)=>state);
+   const  dispatch = useDispatch();
+   console.log(data);
    useEffect(()=>{
     dispatch(asyncGetuser())
    },[]);

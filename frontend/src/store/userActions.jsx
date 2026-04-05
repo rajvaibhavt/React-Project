@@ -3,7 +3,7 @@ import { loaduser } from "./userSlice";
 
 export const asyncGetuser = () => async (dispatch, getState) => {
   try {
-    console.log(getState());
+    console.log("current state >>>",getState());
     const res = await axios.get("/user");
     console.log(res.data);
     dispatch(loaduser(res.data));

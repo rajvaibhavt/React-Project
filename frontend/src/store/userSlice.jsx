@@ -1,3 +1,4 @@
+
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     data:[],
@@ -11,7 +12,8 @@ const initialState = {
         loaduser: (state, action) => {
             // store user data from payload
             state.data = action.payload;
-        }
+            console.log(action)
+        },
     },
     
 });
