@@ -1,11 +1,15 @@
 {
   "$schema": "./node_modules/json-server/schema.json",
   "product": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+    { "id": "1", "username": "raj", "email": "raj@example.com", "password": "password123" },
+    { "id": "2", "username": "john", "email": "john@example.com", "password": "password456" }
   ],
   "user": [
     { "id": "1", "text": "a comment about post 1", "postId": "1" },
     { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "carts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
   ]
 }

@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom'
 const Login = () => {
     const { register, reset, handleSubmit } = useForm()
     const onSubmit = (data) => {
-        
-        data.id  = nanoid();
+      
         
       console.log('login data', data)
       reset()
@@ -18,8 +17,9 @@ const Login = () => {
       <input {...register("username")} type="text" placeholder="raj" />
       <input {...register("email")} type="email" placeholder="Email" />
       <input {...register("password")} type="password" placeholder="Password" />
-      <button type="submit">Login</button>
+      <button  className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' type="submit">Login</button>
       <Link to="/register"
+
        className='text-sm text-blue-400'>
         Don't have an account? Register</Link>
     </form>
